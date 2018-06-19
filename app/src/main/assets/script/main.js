@@ -1,6 +1,4 @@
-//mylib.var = mylib.PI + mylib.fun();
-//var x = new mylib.X(1, true);
-//mylib.prop = x.prop +mylib.fun();
+
 var a = require("a");
 var b = require("b");
 var a = require("a");
@@ -14,4 +12,5 @@ NativeDevice.print(person.name,person.age);
 var y = NativeDevice.add(20, 30);
 var z = 100;
 NativeDevice.print(y);
+NativeDevice.print(NativeDevice.account);
 

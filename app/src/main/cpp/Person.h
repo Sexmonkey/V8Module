@@ -7,9 +7,12 @@
 
 
 #include <string>
+#include <v8.h>
+
 class Person {
 
 public:
+    static int account;
     std::string name;
     int age;
 
@@ -17,7 +20,6 @@ public:
     virtual ~Person();
 
     Person(const std::string &name, int age);
-
     std::string getName();
     int getAge();
     void setName(std::string name);

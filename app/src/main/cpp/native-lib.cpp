@@ -45,13 +45,16 @@ Java_com_boyaa_v8pp_1test_MainActivity_process(JNIEnv *env, jobject instance, jo
                     // bind function
             .set("getName", &Person::getName);
 
-//     // set class into the module template
+    // set class into the module template
     NativeDevice.set("Person", Person_class);
+    //bind a static variables
+    NativeDevice.set("account", Person::account);
 
     NativeDevice.set("print",&LocalCFunction::print);
     NativeDevice.set("add",&LocalCFunction::add);
     NativeDevice.set("compileScript",&LocalCFunction::ExecuteScript2);
     NativeDevice.set("loadScriptSource",&LocalCFunction::loadScriptSource);
+
 //       // set bindings in global object as `mylib`
     isolate->GetCurrentContext()->Global()->Set(
             v8::String::NewFromUtf8(isolate, "NativeDevice"), NativeDevice.new_instance());
