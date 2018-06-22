@@ -39,7 +39,7 @@ Module.wrap = function(script) {
 };
 
 Module.wrapper = [
-  '(function (exports, require, module, __filename) { ',
+  '(function (exports, require, module, _filename) { ',
   '\n});'
 ];
 // Check the cache for the requested file.

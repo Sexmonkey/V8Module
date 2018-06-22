@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/V8ppModule.iml" filepath="$PROJECT_DIR$/V8ppModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/V8Module.iml" filepath="$PROJECT_DIR$/V8Module.iml" />
+      <module fileurl="file://C:\Users\JerryZhu\Desktop\V8Module\V8ppModule.iml" filepath="C:\Users\JerryZhu\Desktop\V8Module\V8ppModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

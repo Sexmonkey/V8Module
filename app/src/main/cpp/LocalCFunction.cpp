@@ -10,7 +10,9 @@
 
  void LocalCFunction::print(const FunctionCallbackInfo<Value> &args)
  {
+
      bool first = true;
+
      for (int i = 0; i < args.Length(); i++) {
          HandleScope handle_scope(args.GetIsolate());
          if (first) {
@@ -18,6 +20,7 @@
          } else {
              printf(" 1111");
          }
+
          String::Utf8Value str(args.GetIsolate(),args[i]);
          LOGI("print is called : %s",*str);
          std::string result(*str);
@@ -75,7 +78,7 @@ Local<Value> ExecuteScript1(Isolate *isolate, const char *source, bool print_res
     }
 }
 
-void LocalCFunction::ExecuteScript2(const FunctionCallbackInfo<Value> &args)
+void LocalCFunction::compileScript(const FunctionCallbackInfo<Value> &args)
 {
 
     Isolate *isolate = args.GetIsolate();

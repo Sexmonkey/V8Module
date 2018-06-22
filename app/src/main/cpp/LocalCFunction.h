@@ -12,7 +12,7 @@ public:
     static void print(const FunctionCallbackInfo <Value> &args);
     static void add(const FunctionCallbackInfo <Value> &args);
     static void loadScriptSource(const FunctionCallbackInfo <Value> &args);
-    static void ExecuteScript2(const FunctionCallbackInfo <Value> &args);
+    static void compileScript(const FunctionCallbackInfo <Value> &args);
     static void ReportException(Isolate* isolate, TryCatch* try_catch);
     static Local<Value> ExecuteScript(Isolate *isolate,const char *name, bool print_result,
                                       bool report_exceptions);

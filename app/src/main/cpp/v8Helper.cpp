@@ -20,7 +20,7 @@ static jobject assetsmanager;
 
 const char* v8Helper::loadScriptSource(const char *name)
 {
-    LOGI("loadScriptSource.................");
+    LOGI("loadScriptSource.................： %s",name);
     std::string source("script/");
     std::string str2(".js");
     source.append(name).append(str2);
@@ -44,7 +44,7 @@ const char* v8Helper::loadScriptSource(const char *name)
     return buffer;
 }
 
-void v8Helper::setEnvAndAessets(JNIEnv *env, jobject assets) {
+void v8Helper::setEnvAndAssets(JNIEnv *env, jobject assets) {
     jniEnv = env;
     assetsmanager = assets;
 }

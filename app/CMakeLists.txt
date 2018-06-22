@@ -34,6 +34,7 @@ add_library( # Sets the name of the library.
              src/main/cpp/Person.cpp
              src/main/cpp/v8Helper.cpp
              src/main/cpp/LocalCFunction.cpp
+             src/main/cpp/JSInterface.cpp
              src/main/cpp/v8pp/class.cpp
              src/main/cpp/v8pp/context.cpp
              src/main/cpp/v8pp/convert.cpp
