@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include "JSInterface.h"
+#include "v8-version-string.h"
 
 extern "C"
 JNIEXPORT jstring JNICALL
@@ -18,6 +19,6 @@ Java_com_boyaa_v8pp_1test_MainActivity_process(JNIEnv *env, jobject instance, jo
     JSInterface::bind(NativeDevice,isolate);
     context.run_script(isolate,"module",true,true);
 
-    return env->NewStringUTF("hello");
+    return env->NewStringUTF(V8_VERSION_STRING);
 
 }

@@ -16,9 +16,10 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        process(getAssets());
+        String v8_version = process(getAssets());
         // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
+        tv.setText("current v8 version is : "+v8_version);
 
     }
 
